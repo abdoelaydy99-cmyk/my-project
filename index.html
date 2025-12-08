@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth dark">
+  <head>
+    <!-- 🌍 Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- 🔍 SEO -->
+    <title> | MEDIA Buyer Development Portfolio</title>
+    <meta
+      name="description"
+      content="Official portfolio of  – MEDIA Buyer Development specialized in building creative,
+ interactive, and high-performance websites using modern technologies like HTML, TailwindCSS, and JavaScript."
+    />
+    <meta
+      name="keywords"
+      content="ABDELRAHMAN ELAYDY, MEDIA Buyer Development,
+ Web Development, Portfolio, TailwindCSS, JavaScript, UI, UX, Creative Development"
+    />
+    <meta name="author" content="ABDELRAHMAN ELAYDY" />
+    <link rel="canonical" href="https://www.omareloweiti.com/" />
+
+    <!-- 📱 Mobile Optimization -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="ABDELRAHMAN ELAYDY" />
+
+    <!-- 🧭 PWA / Manifest -->
+    <!-- <link rel="manifest" href="/manifest.json" /> -->
+
+    <!-- 🧠 Open Graph (Facebook / LinkedIn / Discord) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ABDELRAHMAN ELAYDY" />
+    <meta property="og:url" content="https://www.omareloweiti.com/" />
+    <meta property="og:title" content=" | MEDIA Buyer Development" />
+    <meta
+      property="og:description"
+      content="Creative MEDIA Buyer Development passionate about building immersive user experiences and stunning web interfaces."
+    />
+   
+    <meta property="og:locale" content="en_US" />
+
+    <!-- 🧭 Language & Direction -->
+    <meta name="language" content="en, ar" />
+    <meta http-equiv="content-language" content="en" />
+
+   
+    <!-- 🔐 Security -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:;"
+    />
+
+    <!-- 🖼️ Favicon & Icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="src/assets/img/portfolio_logo2.jpg"
+    />
+    <!-- <link rel="apple-touch-icon" href="src/assets/img/apple-touch-icon.png" /> -->
+
+    <!-- 🎨 Tailwind CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/assets/css/output.css" />
+    <style>
+      /* Custom animations for black theme */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .animate-glow {
+        animation: glow 4s ease-in-out infinite;
+      }
+
+      /* Add subtle animations on scroll */
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-out;
+      }
+
+      .fade-in-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 🌫️ Header -->
+    <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-white/5 dark:bg-black/20 border-b border-white/10 shadow-sm transition-colors duration-500 slide-down">
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center h-16"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <img
+            src="src/assets/img/portfolio_logo2.jpg"
+            alt="ABDELRAHMAN ELAYDY"
+            class="w-10 h-10 rounded-full border border-white/20 shadow-md"
+          />
+          <!-- <span class="font-semibold text-lg text-white tracking-wide">ABDELRAHMAN ELAYDY</span> -->
+          <span
+            class="font-semibold text-lg tracking-wide bg-clip-text text-transparent bg-linear-to-r from-white to-gray-400"
+          >
+            ABDELRAHMAN ELAYDY
+          </span>
+        </div>
+
+    
+
+        <!-- Controls -->
+        <div class="flex items-center gap-3">
+        
+
+        
+
+          <!-- Mobile Menu -->
+          <button
+            id="menuToggle"
+            class="md:hidden w-8 h-8 flex items-center justify-center rounded-full border border-gray-700 text-gray-300 hover:text-white hover:border-gray-500 transition"
+          >
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden flex-col items-center bg-black/80 backdrop-blur-xl border-t border-white/10 slide-down"
+      >
+        <a href="#home" class="block py-3 text-gray-300 hover:text-white"
+          >Home</a
+        >
+        <a href="#about" class="block py-3 text-gray-300 hover:text-white"
+          >About</a
+        >
+        <a href="#skills" class="block py-3 text-gray-300 hover:text-white"
+          >Skills</a
+        >
+        <a href="#projects" class="block py-3 text-gray-300 hover:text-white"
+          >Projects</a
+        >
+        <a href="#contact" class="block py-3 text-gray-300 hover:text-white"
+          >Contact</a
+        >
+      </div>
+    </header>
+
+    <main class="mt-10">
+      <!-- 🦸‍♂️ Hero Section -->
+      <section id="home" class="relative mt-10 h-screen flex flex-col justify-center items-center text-center overflow-hidden">
+        <!-- Vanta.js Background -->
+        <div id="vanta-bg" class="absolute inset-0 -z-10"></div>
+
+        <!-- Main Content -->
+        <div class="container mx-auto px-4">
+          <!-- Profile Image -->
+          <div class="mb-4 mt-10 floating">
+            <div
+              class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden border-4 border-white/30 shadow-2xl"
+            >
+              <img
+                src="src/assets/img/portfolio_logo2.jpg"
+                alt="ABDELRAHMAN ELAYDY"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Name and Title -->
+          <h1
+            id="hero-name"
+            class="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-wider mb-2"
+          >
+            ABDELRAHMAN ELAYDY
+          </h1>
+          <p class="text-xl md:text-2xl text-cyan-300 font-medium mb-4">
+            Creative MEDIA Buyer Development
+          </p>
+          <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-4">
+           A Media Buyer is responsible for planning, launching, and optimizing paid advertising campaigns across digital platforms to achieve the highest possible ROI. They analyze performance data, adjust targeting and budgets, and ensure ads reach the right audience at the right time for maximum impact.
+          </p>
+
+          <!-- Professional Stats -->
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-6"
+          >
+            <div
+              class="stat-card rounded-xl p-4 transition-all duration-300 hover:bg-white/20"
+            >
+              <div class="text-2xl md:text-3xl font-bold text-cyan-300">
+                16+
+              </div>
+              <div class="text-sm md:text-base">Projects Completed</div>
+            </div>
+            <div
+              class="stat-card rounded-xl p-4 transition-all duration-300 hover:bg-white/20"
+            >
+              <div class="text-2xl md:text-3xl font-bold text-cyan-300">4+</div>
+              <div class="text-sm md:text-base">Years Experience</div>
+            </div>
+            <div
+              class="stat-card rounded-xl p-4 transition-all duration-300 hover:bg-white/20"
+            >
+              <div class="text-2xl md:text-3xl font-bold text-cyan-300">
+                300000$
+              </div>
+              <div class="text-sm md:text-base">Advertising expenses</div>
+            </div>
+            <div
+              class="stat-card rounded-xl p-4 transition-all duration-300 hover:bg-white/20"
+            >
+              <div class="text-2xl md:text-3xl font-bold text-cyan-300">
+                20+
+              </div>
+              <div class="text-sm md:text-base">Technologies</div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap justify-center gap-4 mb-10">
+            <a
+              href="https://drive.google.com/file/d/1iU6EkipoJmen9D5TD3w6rpO-WIgTKnaN/view?usp=drive_link"
+              class="px-6 py-3 bg-cyan-500 hover:bg-red-600 text-white rounded-full text-lg shadow-lg transition-all duration-300 hover:scale-105 flex items-center"
+            >
+              <i class="fas fa-code mr-2"></i>
+              View My Work
+            </a>
+            <a
+              href="https://wa.me/qr/PRUZKS7XELPPG1"
+              class="px-6 py-3 bg-transparent border-2 border-white hover:bg-white/10 text-white rounded-full text-lg transition-all duration-300 hover:scale-105 flex items-center"
+            >
+              <i class="fas fa-envelope mr-2"></i>
+              Contact Me
+            </a>
+          </div>
+          <div class="flex flex-wrap justify-center gap-4 mb-10">
+          <a
+  href="https://www.instagram.com/abdoelaydy2?utm_source=qr&igsh=MXAzcG1wa3kwMGlqcA=="
+  class="px-6 py-3 bg-red-600 hover:bg-cyan-500 text-white rounded-full text-lg shadow-lg transition-all duration-300 hover:scale-105 flex items-center"
+>
+  <i class="fa-brands fa-instagram"></i>
+  Instagram
+</a>
+</div>
+        </div>
+
+     
+      </section>
+
+
+    </main>
+
+    <script src="src/assets/js/main.js" defer></script>
+    <!-- 🌊 GSAP & SplitText -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js" defer></script>
+
+    <!-- 🌌 Vanta.js Waves Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js" defer></script>
+
+    <!-- 🌙 Theme & Menu JS -->
+    <script>
+      const themeToggle = document.getElementById("themeToggle");
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const icon = themeToggle.querySelector("i");
+
+      // 🌗 Toggle Theme
+      themeToggle.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        icon.classList.toggle("fa-moon");
+        icon.classList.toggle("fa-sun");
+        themeToggle.classList.add("rotate-180");
+        setTimeout(() => themeToggle.classList.remove("rotate-180"), 300);
+      });
+
+      // 📱 Toggle Mobile Menu
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuToggle.querySelector("i").classList.toggle("fa-bars");
+        menuToggle.querySelector("i").classList.toggle("fa-xmark");
+      });
+    </script>
+
+    <script>
+      // Add scroll animations
+      document.addEventListener("DOMContentLoaded", function () {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        }, observerOptions);
+
+        // Observe all elements with fade-in-up class
+        document.querySelectorAll(".fade-in-up").forEach((el) => {
+          observer.observe(el);
+        });
+
+        // Add float animation to profile image
+        const profileImage = document.querySelector(
+          ".rounded-full.overflow-hidden"
+        );
+        if (profileImage) {
+          profileImage.classList.add("animate-float", "animate-glow");
+        }
+      });
+    </script>
+  </body>
+</html>

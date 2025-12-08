@@ -1,0 +1,27 @@
+@import url("../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css");
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/aspect-ratio";
+@plugin "@tailwindcss/container-queries";
+
+@layer utilities {
+  .slide-down {
+    animation: slideDown 0.4s ease forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+body {
+ font-family: "Pangolin", cursive;
+}
