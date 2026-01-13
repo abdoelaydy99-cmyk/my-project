@@ -347,47 +347,6 @@
         }
       });
     </script>
-    <script>
-(function clearClientStorage() {
-  // 1️⃣ Local Storage
-  if (window.localStorage) {
-    localStorage.clear();
-  }
 
-  // 2️⃣ Session Storage
-  if (window.sessionStorage) {
-    sessionStorage.clear();
-  }
-
-  // 3️⃣ Cookies
-  document.cookie.split(";").forEach(cookie => {
-    const eqPos = cookie.indexOf("=");
-    const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-    document.cookie =
-      name +
-      "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
-  });
-
-  // 4️⃣ Cache API (PWA / Service Worker)
-  if ("caches" in window) {
-    caches.keys().then(names => {
-      names.forEach(name => {
-        caches.delete(name);
-      });
-    });
-  }
-
-  // 5️⃣ إلغاء Service Workers
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.getRegistrations().then(registrations => {
-      registrations.forEach(registration => {
-        registration.unregister();
-      });
-    });
-  }
-
-  console.log("Client storage cleared ✅");
-})();
-</script>
   </body>
 </html>
